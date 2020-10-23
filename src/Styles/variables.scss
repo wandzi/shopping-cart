@@ -3,8 +3,10 @@ $secondary-color: #000000;
 
 $btn-font-color: #FFFFFF;
 $border-color: #E9E9E9;
+$background-color: #eeeeee;
 
 @mixin button {
+    display: block;
     padding: 10px 15px;
     font-size: 0.9rem;
     letter-spacing: 0.6px;
@@ -12,4 +14,9 @@ $border-color: #E9E9E9;
     color: $btn-font-color;
     background-color: $secondary-color;
     font-family: inherit;
+}
+
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,0 +1,41 @@
+@import "../../Styles/variables.scss";
+
+.cart-summar-container {
+    margin-left: 30px;
+    width: 25%;
+    color: $secondary-color;
+    font-weight: 600;
+}
+.cart-summary__shipping {
+    border: 1px solid $border-color;
+}
+.cart-summary__total {
+    border-bottom: 1px solid $border-color;
+}
+.cart-summary__shipping, .cart-summary__total {
+    @include flex-space-between;
+    margin-bottom: 15px;
+    padding: 10px 10px;
+    background-color: $background-color;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+.cart-summary__title {
+    color: $primary-color;
+}
+.cart-summary__description {
+    @include flex-space-between;
+    padding: 10px;
+    &:first-child {
+        border-bottom: 1px solid $border-color;
+    }
+}
+.cart-total-container {
+    margin: 0 auto;
+    border: 1px solid $border-color;
+}
+.cart-total__button {
+    @include button;
+    margin: 20px auto;
+}

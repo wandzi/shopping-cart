@@ -5,8 +5,11 @@
     width: 70%;
     height: 80%;
  }
-
- .shopping-cart-container__main-shopping-cart {
-    border: 1px solid $border-color;
+ .shopping-cart-container__grid {
+   display: flex;
  }
+.shopping-cart-main {
+   width: 75%;
+   border: 1px solid $border-color;
+}
   
