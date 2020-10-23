@@ -1,0 +1,23 @@
+@import "../../Styles/variables.scss";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header__shopping-cart-title {
+    font-weight: 200;
+    color: $primary-color;
+}
+
+.header__button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    letter-spacing: 0.6px;
+    border: none;
+    color: $font-color;
+    background-color: $secondary-color;
+    font-family: inherit;
+}
