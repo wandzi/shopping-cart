@@ -1,0 +1,21 @@
+@import "../../Styles/variables.scss";
+
+.item__description {
+    text-align: center;
+    color: $primary-color;
+}
+.item__input {
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+}
+.item__button {
+    width: 20px;
+    height: 20px;
+    border-radius: 0; 
+}
+.item__delete-btn .item__edit-btn {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}

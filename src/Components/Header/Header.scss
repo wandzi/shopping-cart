@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .header__shopping-cart-title {
@@ -13,11 +14,5 @@
 }
 
 .header__button {
-    padding: 10px 15px;
-    font-size: 0.9rem;
-    letter-spacing: 0.6px;
-    border: none;
-    color: $font-color;
-    background-color: $secondary-color;
-    font-family: inherit;
+    @include button
 }

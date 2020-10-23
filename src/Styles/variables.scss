@@ -1,5 +1,15 @@
 $primary-color: #777777;
 $secondary-color: #000000;
 
-$font-color: #FFFFFF;
+$btn-font-color: #FFFFFF;
 $border-color: #E9E9E9;
+
+@mixin button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    letter-spacing: 0.6px;
+    border: none;
+    color: $btn-font-color;
+    background-color: $secondary-color;
+    font-family: inherit;
+}

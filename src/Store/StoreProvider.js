@@ -10,7 +10,6 @@ const StoreProvider = ({ children }) => {
           {
               productName: 'Headphones',
               unityPrice: 11.90,
-              quantity: 1
           }
         ],
       

@@ -1,3 +1,27 @@
-.shopping-cart-list {
-    width: 50%;
+@import "../../Styles/variables.scss";
+
+.table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-spacing: 0 5px;
+    width: 90%;
+    border-bottom: 1px solid $border-color;
+}
+.table__thead {
+    text-align: center;
+    color: $primary-color;
+    border-collapse: collapse;
+    border-bottom: 1px solid $border-color;
+}
+.table__header-description {
+    padding-bottom: 10px;
+}
+.table__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    width: 90%;
+}
+.table__button {
+    @include button
 }
