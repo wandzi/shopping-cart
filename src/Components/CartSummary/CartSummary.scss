@@ -22,14 +22,18 @@
     letter-spacing: 0.6px;
 }
 .cart-summary__title {
+    font-size: 1rem;
     color: $primary-color;
 }
 .cart-summary__description {
     @include flex-space-between;
-    padding: 10px;
-    &:first-child {
-        border-bottom: 1px solid $border-color;
-    }
+    padding: 10px 25px;
+}
+.horrizontal-line {
+    width: 80%;
+}
+.cart-summary__total-price {
+    font-size: 1.2rem;
 }
 .cart-total-container {
     margin: 0 auto;

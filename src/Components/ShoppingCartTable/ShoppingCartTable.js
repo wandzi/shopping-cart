@@ -3,6 +3,8 @@ import { Observer } from 'mobx-react-lite';
 import './ShoppingCartTable.scss'
 
 import ShoppingCartItem from '../ShoppingCartItem/ShoppingCartItem'
+import TableHeader from '../TableHeader/TableHeader'
+import TableFooter from '../TableFooter/TableFooter'
 import StoreContext from '../../Store/StoreContext'
 
 const ShoppingCartTable = () => {
@@ -12,15 +14,8 @@ const ShoppingCartTable = () => {
     return <Observer>{() => (
       <>
         <table className="table">
-          <thead className="table__thead">
-            <tr>
-              <th></th>
-              <th></th>
-              <th className="table__header-description">Product Name</th>
-              <th className="table__header-description">Unit Price</th>
-              <th className="table__header-description">Qty</th>
-            </tr>
-          </thead>
+          
+          <TableHeader />
 
           {store.items.map(item =>{
             return <ShoppingCartItem 
@@ -31,9 +26,7 @@ const ShoppingCartTable = () => {
                     />
           })}
         </table>
-        <div className="table__footer">
-          <button className="table__button">Update Shopping Cart</button>
-        </div>
+        <TableFooter />
       </>
     )}</Observer>
 }

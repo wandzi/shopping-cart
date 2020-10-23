@@ -1,0 +1,11 @@
+@import "../../Styles/variables.scss";
+
+.table__thead {
+    text-align: center;
+    color: $primary-color;
+    border-collapse: collapse;
+    border-bottom: 1px solid $border-color;
+}
+.table__header-description {
+    padding-bottom: 10px;
+}

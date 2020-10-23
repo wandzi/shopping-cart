@@ -1,0 +1,12 @@
+@import "../../Styles/variables.scss";
+
+.table__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.table__button {
+    @include button;
+    margin-right: 50px;
+}

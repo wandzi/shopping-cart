@@ -16,9 +16,10 @@ const CartSummary = () => {
                     <span className="cart-summary__title">Subtotal</span> 
                     <span>$23.80</span>
                 </div>
+                <hr className="horrizontal-line"/>
                 <div className="cart-summary__description">
                     <span className="cart-summary__title">Grand total</span> 
-                    <span>$23.80</span>
+                    <span className="cart-summary">$23.80</span>
                 </div>
                 <button className="cart-total__button ">Proceed to checkout</button>
             </div>
