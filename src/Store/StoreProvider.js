@@ -22,6 +22,7 @@ const StoreProvider = ({ children }) => {
         shippingCost: 0,
         subtotal: 0,
         grandTotal: 0,
+        submitHandler: false,
 
         //Increment and Decrement item quantity
         incCount: () => {
@@ -50,8 +51,9 @@ const StoreProvider = ({ children }) => {
           store.items = result
           store.defaultValues()
         },
-        toogleCart: () => {
-          console.log('hide');
+        submitCart: () => {
+          store.grandTotal > 0 ? store.submitHandler = true : store.submitHandler = false
+          store.defaultValues()
         },
         updateCart: () => {
           if(store.itemsCount !== 0) {

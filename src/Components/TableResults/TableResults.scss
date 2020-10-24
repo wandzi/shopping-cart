@@ -1,0 +1,9 @@
+@import "../../Styles/variables.scss";
+
+.table {
+    margin: 40px auto;
+    border-collapse: collapse;
+    border-spacing: 0 5px;
+    width: 90%;
+    border-bottom: 1px solid $border-color;
+}

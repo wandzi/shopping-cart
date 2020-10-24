@@ -26,7 +26,7 @@ const CartSummary = () => {
                     <span className="cart-summary__title">Grand total</span> 
                     <span className="cart-summary">${store.grandTotal}</span>
                 </div>
-                <button className="cart-total__button " onClick={store.toogleCart}>Proceed to checkout</button>
+                <button className="cart-total__button " onClick={store.submitCart}>Proceed to checkout</button>
             </div>
         </div>
     )}</Observer>
