@@ -1,9 +1,14 @@
 import React from 'react'
-
+import { Observer } from 'mobx-react-lite'
 import './CartSummary.scss'
 
+import StoreContext from '../../Store/StoreContext'
+
 const CartSummary = () => {
-    return (
+
+    const store = React.useContext(StoreContext)
+
+    return <Observer>{ () => (
         <div className="cart-summar-container">
             <div className="cart-summary__shipping">
                 <span>Shipping:</span> 
@@ -14,7 +19,7 @@ const CartSummary = () => {
                 <div className="cart-summary__total">Cart totals</div>
                 <div className="cart-summary__description"> 
                     <span className="cart-summary__title">Subtotal</span> 
-                    <span>$23.80</span>
+                    <span>$</span>
                 </div>
                 <hr className="horrizontal-line"/>
                 <div className="cart-summary__description">
@@ -24,7 +29,7 @@ const CartSummary = () => {
                 <button className="cart-total__button ">Proceed to checkout</button>
             </div>
         </div>
-    ) 
+    )}</Observer>
 }
 
 export default CartSummary;

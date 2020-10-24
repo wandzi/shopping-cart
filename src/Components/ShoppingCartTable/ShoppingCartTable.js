@@ -19,7 +19,7 @@ const ShoppingCartTable = () => {
 
           {store.items.map(item =>{
             return <ShoppingCartItem 
-                      key={item.image}
+                      key={item.id}
                       itemImage={item.image}
                       itemName={item.productName} 
                       itemPrice={item.unityPrice}
