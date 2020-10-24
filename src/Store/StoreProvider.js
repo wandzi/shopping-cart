@@ -18,7 +18,8 @@ const StoreProvider = ({ children }) => {
         ],  
 
         itemsCount: 0,
-        subtotal: '',
+        shippingCost: 0,
+        subtotal: 0,
 
         incCount: () => {
           store.itemsCount += 1
@@ -26,6 +27,16 @@ const StoreProvider = ({ children }) => {
         decCount: () => {
           store.itemsCount === 0 ? store.itemsCount = 0 : store.itemsCount -= 1          
         },
+        calcSubtotal: () => {
+          store.subtotal = store.itemsCount * store.items[0].unityPrice
+        },
+        shipping: () => {
+
+        },
+
+        updateCart: () => {
+          store.calcSubtotal()
+        }
 
     }));
   

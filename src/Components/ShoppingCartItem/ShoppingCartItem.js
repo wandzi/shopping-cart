@@ -20,7 +20,7 @@ const ShoppingCartItem = (props) => {
           <button className="item__button" onClick={store.decCount}>-</button>
           <input value={store.itemsCount} className="item__input"></input>
           <button className="item__button" onClick={store.incCount}>+</button>
-          <span className="item__edit-btn"><img alt="item_edit_img"src={editButton}></img></span>
+          <span className="item__edit-btn" onClick={store.updateCart}><img alt="item_edit_img"src={editButton}></img></span>
       </td>
     </tr>
   )}</Observer>

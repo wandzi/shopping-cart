@@ -12,14 +12,14 @@ const CartSummary = () => {
         <div className="cart-summar-container">
             <div className="cart-summary__shipping">
                 <span>Shipping:</span> 
-                <span>$23.80</span>    
+                <span>${store.shippingCost}</span>    
             </div>
 
             <div className="cart-total-container">
                 <div className="cart-summary__total">Cart totals</div>
                 <div className="cart-summary__description"> 
                     <span className="cart-summary__title">Subtotal</span> 
-                    <span>$</span>
+                    <span>${store.subtotal}</span>
                 </div>
                 <hr className="horrizontal-line"/>
                 <div className="cart-summary__description">
