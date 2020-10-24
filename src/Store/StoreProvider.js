@@ -8,6 +8,7 @@ const StoreProvider = ({ children }) => {
 
     const store = useLocalObservable(() => ({
 
+        //Store
         items: [
           {
               id: 'ACXaoa87750a&*(^G',
@@ -22,6 +23,7 @@ const StoreProvider = ({ children }) => {
         subtotal: 0,
         grandTotal: 0,
 
+        //Increment and Decrement item quantity
         incCount: () => {
           store.itemsCount += 1
         },
@@ -29,6 +31,7 @@ const StoreProvider = ({ children }) => {
           store.itemsCount === 0 ? store.itemsCount = 0 : store.itemsCount -= 1          
         },
 
+        // Calculations
         calcSubtotal: () => {
           let result = Math.round((store.itemsCount * store.items[0].unityPrice) * 100) / 100
           store.subtotal = result
@@ -41,21 +44,31 @@ const StoreProvider = ({ children }) => {
           store.subtotal <= 100 ? store.shippingCost = 23.80 : store.shippingCost = 0
         },
 
-        deleteItem: () => {
-          
+        //Actions
+        removeItem: (id) => {
+          const result = store.items.filter((item) => item.id !== id);
+          store.items = result
+          store.defaultValues()
         },
-
+        toogleCart: () => {
+          console.log('hide');
+        },
         updateCart: () => {
           if(store.itemsCount !== 0) {
             store.calcSubtotal()
             store.calcShipping()
             store.calcGrandTotal()
           } else {
-            store.shippingCost = 0
-            store.subtotal = 0
-            store.grandTotal = 0
+            store.defaultValues()
           }
-        }
+        },
+
+        //
+        defaultValues: () => {
+          store.shippingCost = 0
+          store.subtotal = 0
+          store.grandTotal = 0
+        },
 
     }));
   

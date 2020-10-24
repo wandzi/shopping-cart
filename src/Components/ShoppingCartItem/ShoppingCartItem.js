@@ -12,7 +12,7 @@ const ShoppingCartItem = (props) => {
 
   return <Observer>{ () => (
     <tr>  
-      <td className="item__description"><span className="item__delete-btn" onClick={store.deleteItem}><img alt="item_delete_img" src={deleteButton}></img></span></td>
+      <td className="item__description"><span className="item__delete-btn" onClick={() => store.removeItem(props.itemId)}><img alt="item_delete_img" src={deleteButton}></img></span></td>
       <td className="item__description"><img alt="item_img" src={props.itemImage}></img></td>
       <td className="item__description">{props.itemName}</td>
       <td className="item__description">${props.itemPrice}</td>
