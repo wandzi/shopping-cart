@@ -12,7 +12,11 @@ const ShoppingCartItem = (props) => {
 
   return <Observer>{ () => (
     <tr>  
-      <td className="item__description"><span className="item__delete-btn" onClick={() => store.removeItem(props.itemId)}><img alt="item_delete_img" src={deleteButton}></img></span></td>
+      <td className="item__description">
+        <button className="item__delete-btn" onClick={() => store.removeItem(props.itemId)}>
+          <img alt="item_delete_img" src={deleteButton}></img>
+        </button>
+      </td>
       <td className="item__description"><img alt="item_img" src={props.itemImage}></img></td>
       <td className="item__description">{props.itemName}</td>
       <td className="item__description">${props.itemPrice}</td>
@@ -20,7 +24,9 @@ const ShoppingCartItem = (props) => {
           <button className="item__button" onClick={store.decCount}>-</button>
           <input value={store.itemsCount} className="item__input"></input>
           <button className="item__button" onClick={store.incCount}>+</button>
-          <span className="item__edit-btn" onClick={store.updateCart}><img alt="item_edit_img"src={editButton}></img></span>
+          <button className="item__edit-btn" onClick={store.updateCart}>
+            <img className="item__edit-img" alt="item_edit_img" src={editButton}></img>
+          </button>
       </td>
     </tr>
   )}</Observer>

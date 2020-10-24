@@ -28,19 +28,17 @@
     align-items: center;
     justify-content: center;
 }
-
-.item__delete-btn {
+.item__edit-btn, .item__delete-btn {
     vertical-align: middle;
     width: 30px;
     height: 30px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
     cursor: pointer;
 }
-.item__edit-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+.item__edit-img {
+    vertical-align: middle;
+    margin: 0 auto;
 }

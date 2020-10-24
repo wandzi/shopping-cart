@@ -22,7 +22,7 @@ const StoreProvider = ({ children }) => {
         shippingCost: 0,
         subtotal: 0,
         grandTotal: 0,
-        submitHandler: false,
+        submitPremission: false,
 
         //Increment and Decrement item quantity
         incCount: () => {
@@ -52,7 +52,7 @@ const StoreProvider = ({ children }) => {
           store.defaultValues()
         },
         submitCart: () => {
-          store.grandTotal > 0 ? store.submitHandler = true : store.submitHandler = false
+          store.grandTotal > 0 ? store.submitPremission = true : store.submitPremission = false
           store.defaultValues()
         },
         updateCart: () => {
@@ -67,6 +67,7 @@ const StoreProvider = ({ children }) => {
 
         //
         defaultValues: () => {
+          store.itemsCount = 0
           store.shippingCost = 0
           store.subtotal = 0
           store.grandTotal = 0

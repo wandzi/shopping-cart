@@ -10,7 +10,7 @@ const ShoppingCartTable = () => {
 
     return <Observer>{() => (
       <>
-        {store.submitHandler === false ? <TableResults /> : <div className="submitted-message">Your order has been submitted successfully.</div>}
+        {store.submitPremission === false ? <TableResults /> : <div className="submitted-message">Your order has been submitted successfully.</div>}
       </>
     )}</Observer>
 }
