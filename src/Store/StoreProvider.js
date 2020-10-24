@@ -20,6 +20,7 @@ const StoreProvider = ({ children }) => {
         itemsCount: 0,
         shippingCost: 0,
         subtotal: 0,
+        grandTotal: 0,
 
         incCount: () => {
           store.itemsCount += 1
@@ -27,15 +28,33 @@ const StoreProvider = ({ children }) => {
         decCount: () => {
           store.itemsCount === 0 ? store.itemsCount = 0 : store.itemsCount -= 1          
         },
-        calcSubtotal: () => {
-          store.subtotal = store.itemsCount * store.items[0].unityPrice
-        },
-        shipping: () => {
 
+        calcSubtotal: () => {
+          let result = Math.round((store.itemsCount * store.items[0].unityPrice) * 100) / 100
+          store.subtotal = result
+        },
+        calcGrandTotal: () => {
+          let result = Math.round((store.subtotal + store.shippingCost) * 100) / 100
+          store.grandTotal = result
+        },
+        calcShipping: () => {
+          store.subtotal <= 100 ? store.shippingCost = 23.80 : store.shippingCost = 0
+        },
+
+        deleteItem: () => {
+          
         },
 
         updateCart: () => {
-          store.calcSubtotal()
+          if(store.itemsCount !== 0) {
+            store.calcSubtotal()
+            store.calcShipping()
+            store.calcGrandTotal()
+          } else {
+            store.shippingCost = 0
+            store.subtotal = 0
+            store.grandTotal = 0
+          }
         }
 
     }));

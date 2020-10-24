@@ -24,7 +24,7 @@ const CartSummary = () => {
                 <hr className="horrizontal-line"/>
                 <div className="cart-summary__description">
                     <span className="cart-summary__title">Grand total</span> 
-                    <span className="cart-summary">$23.80</span>
+                    <span className="cart-summary">${store.grandTotal}</span>
                 </div>
                 <button className="cart-total__button ">Proceed to checkout</button>
             </div>
