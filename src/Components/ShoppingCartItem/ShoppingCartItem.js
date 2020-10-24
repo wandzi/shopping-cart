@@ -11,7 +11,7 @@ const ShoppingCartItem = (props) => {
   const store = React.useContext(StoreContext)
 
   return <Observer>{ () => (
-    <tr>  
+    <tr> 
       <td className="item__description">
         <button className="item__delete-btn" onClick={() => store.removeItem(props.itemId)}>
           <img alt="item_delete_img" src={deleteButton}></img>
@@ -22,7 +22,7 @@ const ShoppingCartItem = (props) => {
       <td className="item__description">${props.itemPrice}</td>
       <td className="item__description">
           <button className="item__button" onClick={store.decCount}>-</button>
-          <input value={store.itemsCount} className="item__input"></input>
+          <input type="text" onChange={() =>{}} value={store.itemsCount} className="item__input"></input>
           <button className="item__button" onClick={store.incCount}>+</button>
           <button className="item__edit-btn" onClick={store.updateCart}>
             <img className="item__edit-img" alt="item_edit_img" src={editButton}></img>

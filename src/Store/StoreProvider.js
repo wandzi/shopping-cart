@@ -27,7 +27,6 @@ const StoreProvider = ({ children }) => {
     //Increment and Decrement item quantity
     incCount: () => {
       store.itemsCount += 1
-      console.log(store.items[0].id)
     },
     decCount: () => {
       store.itemsCount === 0 ? store.itemsCount = 0 : store.itemsCount -= 1          

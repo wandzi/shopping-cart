@@ -15,16 +15,17 @@ const TableResults = () => {
             <table className="table">
                 
                 <TableHeader />
-
-                {store.items.map(item =>{
-                return <ShoppingCartItem 
-                            key={item.id}
-                            itemId={item.id}
-                            itemImage={item.image}
-                            itemName={item.productName} 
-                            itemPrice={item.unityPrice}
-                        />
-                })}
+                <tbody>
+                    {store.items.map(item =>{
+                    return <ShoppingCartItem 
+                                key={item.id}
+                                itemId={item.id}
+                                itemImage={item.image}
+                                itemName={item.productName} 
+                                itemPrice={item.unityPrice}
+                            />
+                    })}
+                </tbody>
 
             </table>
             <TableFooter />
